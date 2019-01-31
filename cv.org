@@ -178,7 +178,7 @@
                    \Ovalbox{Grid5000}
                    \Ovalbox{GCE/AWS}
                    \Ovalbox{Automated Testing}
-                   \Ovalbox{Continous Integration}
+                   \Ovalbox{Continuous Integration}
                    \Ovalbox{\LaTeX}
                    }}{}
 \end{supertabular}
