@@ -1,0 +1,188 @@
+# -*- mode: org -*-
+# -*- coding: utf-8 -*-
+#+STARTUP: overview indent inlineimages logdrawer
+
+#+TITLE:
+#+AUTHOR:
+#+LANGUAGE:    en
+#+TAGS: noexport(n) Stats(S)
+#+TAGS: Teaching(T) R(R) OrgMode(O) Python(P)
+#+TAGS: Book(b) DOE(D) Code(C) NODAL(N) FPGA(F) Autotuning(A) Arnaud(r)
+#+TAGS: DataVis(v) PaperReview(W)
+#+OPTIONS:   H:3 num:t toc:nil \n:nil @:t ::t |:t ^:t -:t f:t *:t <:t
+#+OPTIONS:   TeX:t LaTeX:nil skip:nil d:nil todo:t pri:nil tags:not-in-toc
+#+EXPORT_SELECT_TAGS: export
+#+EXPORT_EXCLUDE_TAGS: noexport
+
+#+LATEX_CLASS: article
+#+LATEX_CLASS_OPTIONS: [10pt]
+#+LATEX_HEADER: \input{structure.tex}
+# #+LATEX_HEADER: \rfoot{\color{headings}{\sffamily Last update: \today. Typeset with Xe\LaTeX}}
+
+#+BEGIN_EXPORT latex
+\parbox[top][0.12\textheight][c]{\linewidth}{ % Parbox to hold the author name and CV text; fixed height to match the coloured box to the right, centred vertically and full line width
+    \vspace{-0.08\textheight} % Reduce whitespace above the parbox to separate it from the main content
+    \centering % Centre text
+    {\LARGE \textbf{Pedro Bruel | Researcher \& Software Engineer}}\\\medskip % Your name
+    {\Large Performance Tuning \& Modeling \textbullet{} Optimal Experimental Design}
+}
+
+%----------------------------------------------------------------------------------------
+%    contact details box
+%----------------------------------------------------------------------------------------
+
+\parbox[top][0.12\textheight][c]{\linewidth}{ % Parbox to hold the colour box; fixed height to match the name/CV text to the left, centred vertically and full line width
+    \vspace{-0.19\textheight} % Reduce whitespace above the parbox to separate it from the main content
+    \centering
+    \colorbox{shade}{ % Create the coloured box
+        \begin{supertabular}{p{0.75\linewidth}} % Start a table with two columns, the table will ensure everything is aligned
+            \raisebox{-1pt}{\faHome} \hspace{0.15cm} 2b Rue Charles Gounod, 38000 Grenoble, France \hspace{0.2cm} \raisebox{-1pt}{\faPhone} \hspace{0.14cm} +33 07 68 33 24 38 \\ % Address
+            \raisebox{0pt}{\small\faEnvelope} \hspace{0.2cm} \href{mailto:pedro.bruel@gmail.com}{pedro.bruel@gmail.com} \hspace{0.2cm} \raisebox{0pt}{\small\faDesktop} \hspace{0.2cm} \href{https://www.ime.usp.br/~phrb}{ime.usp.br/\textasciitilde{}phrb} \hspace{0.31cm} \raisebox{-1pt}{\faLinkedin} \hspace{0.2cm} \href{https://www.linkedin.com/in/pedro-bruel}{pedro-bruel} \hspace{0.2cm} \raisebox{-1pt}{\faGithub} \hspace{0.2cm} \href{https://github.com/phrb}{phrb} \\
+            % See fontawesome.pdf in the fonts folder for all icons you can use
+        \end{supertabular}
+    }
+}
+
+\vspace{-0.11\textheight} % Reduce whitespace above the parbox to separate it from the main content
+\begin{paracol}{2} % Begin the multi-column environment
+#+END_EXPORT
+
+* Setup                                                            :noexport:
+:PROPERTIES:
+:BEAMER_env: ignoreheading
+:END:
+#+HEADER: :results output :exports none :eval no-export
+#+BEGIN_SRC emacs-lisp
+  (setq org-latex-pdf-process (list "latexmk -xelatex %f"))
+#+END_SRC
+
+#+RESULTS:
+* Experience
+#+BEGIN_EXPORT latex
+\newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+
+\begin{supertabular}{R{0.3\linewidth}L{0.64\linewidth}}
+
+\workposition{2017 -- May 2020}
+    {PhD Researcher}
+    {Grenoble Informatics Laboratory}
+    {University of Grenoble Alpes, France}
+    {Developing Design of Experiments Techniques for autotuning High-Performance
+    Computing kernels and compilers on CPUs, GPUs and FPGAs}
+
+\workposition{2015 -- May 2020}
+    {PhD Researcher}
+    {Software Systems Laboratory}
+    {University of São Paulo, Brazil}
+    {Developed autotuners for High-Level Synthesis compilers for FPGAs and for
+    the CUDA Compiler using Search Heuristics}
+
+\workposition{2015 -- 2016}
+    {PhD Research Collaborator}
+    {Hewllett-Packard Enterprise}
+    {University of São Paulo, Brazil}
+    {Developed an autotuner for the LegUp High-Level Synthesis compiler for
+    Altera FPGAs}
+
+\workposition{2012 -- 2014}
+    {Research Intern}
+    {Computer Music Research Group}
+    {University of São Paulo, Brazil}
+    {Maintained and developed a multiagent system for music composition via
+    agent interaction}
+
+\end{supertabular}
+
+\vspace{-\baselineskip}\medskip % Standardise the whitespace after this section and before the next (the custom command adds too much otherwise)
+#+END_EXPORT
+* Education
+#+BEGIN_EXPORT latex
+\begin{supertabular}{R{0.24\linewidth}L{0.7\linewidth}}
+    \workposition{2015 -- 2020}
+    {PhD in Computer Science}
+    {University of Grenoble Alpes, France}
+    {University of São Paulo, Brazil}
+    {High-Performance Computing, Autotuning, Design of Experiments, Search
+    Heuristics, Data Analysis}
+
+    \workposition{2010 -- 2014} % Duration
+    {BsC in Molecular Sciences}
+    {}
+    {University of São Paulo, Brazil}
+    {Multiagent Systems, Digital Signal Processing}
+
+\end{supertabular}
+
+\switchcolumn % Switch to the next paracol column
+#+END_EXPORT
+* Selected Publications
+#+BEGIN_EXPORT latex
+\longformpublication{\textbf{Bruel, P.}, Goldman, A., Chalamalasetti, S.R. and Milojicic, D., \textbf{2017}. \textit{Autotuning high-level synthesis for FPGAs using OpenTuner and LegUp}. In ReConFigurable Computing and FPGAs (ReConFig), 2017 International Conference on (pp. 1-6). IEEE.}
+
+\longformpublication{\textbf{Bruel, P.}, Chalamalasetti, S.R., Dalton, C., El Hajj, I., Goldman, A., Graves, C., Hwu, W.M., Laplante, P., Milojicic, D., Ndu, G. and Strachan, J.P., \textbf{2017}. \textit{Generalize or Die: Operating Systems Support for Memristor-based Accelerators}. In 2017 IEEE International Conference on Rebooting Computing (ICRC) (pp. 1-8). IEEE.}
+
+\longformpublication{\textbf{Bruel, P.}, Amarís, M. and Goldman, A., \textbf{2017}. \textit{Autotuning CUDA compiler parameters for heterogeneous applications using the OpenTuner framework}. Concurrency and Computation: Practice and Experience, 29(22), p.e3973.}
+
+\longformpublication{\textbf{Bruel, P.}, Meirelles, P., Cobe, R., Goldman, A., \textbf{2017}. \textit{OpenMP or Pthreads: Which is Better for Beginners?}. In 8th Workshop on Evaluation and Usability of Programming Languages and Tools (PLATEAU).}
+
+\longformpublication{Gonçalves, R., Amaris, M., Okada, T., \textbf{Bruel, P.} and Goldman, A., \textbf{2016}. \textit{Openmp is not as Easy as it Appears}. In System Sciences (HICSS), 2016 49th Hawaii International Conference on (pp. 5742-5751). IEEE.}
+
+\longformpublication{\textbf{Bruel, P.} and Queiroz, M., \textbf{2014}. \textit{A Protocol for creating Multiagent Systems in Ensemble with Pure Data}. In International Computer Music Conference (ICMC).}
+
+\medskip % Extra whitespace before the next section
+
+%\end{paracol}
+#+END_EXPORT
+* Languages
+#+BEGIN_EXPORT latex
+\begin{supertabular}{R{0.3\linewidth}R{0.3\linewidth}}
+\tableentry{Portuguese}{Native}{}
+\tableentry{English}{\textit{CEFR C2}}{}
+\tableentry{French}{\textit{CEFR B2}}{}
+\tableentry{Spanish}{\textit{CEFR A2}}{}
+\end{supertabular}
+\end{paracol}
+%\switchcolumn % Switch to the next paracol column
+#+END_EXPORT
+* Skills
+#+BEGIN_EXPORT latex
+\begin{paracol}{1}
+\newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+
+\begin{center}
+\begin{supertabular}{C{0.3\linewidth}C{0.25\linewidth}C{0.3\linewidth}}
+\tableheaderthree{Performance Tuning}{Software Engineering}{Tools and Infrastructure}{b}
+\shrinkheight{3pt}
+\tableentrythree{{\small\Ovalbox{Stochastic Search Heuristics}
+                  \Ovalbox{Design of Experiments}
+                  \Ovalbox{Optimal Experimental Design}
+                  \Ovalbox{Performance Modeling}
+                  \Ovalbox{Data Science}
+                  }}
+                 {{\small\Ovalbox{Python}
+                   \Ovalbox{Julia}
+                   \Ovalbox{R}
+                   \Ovalbox{Bash}
+                   \Ovalbox{C/C++}
+                   \Ovalbox{OpenMP}
+                   \Ovalbox{MPI}
+                   \Ovalbox{CUDA C}
+                   \Ovalbox{Java}
+                   }}
+                 {{\small\Ovalbox{GNU/Linux}
+                   \Ovalbox{Git}
+                   \Ovalbox{Grid5000}
+                   \Ovalbox{GCE/AWS}
+                   \Ovalbox{Automated Testing}
+                   \Ovalbox{Continous Integration}
+                   \Ovalbox{\LaTeX}
+                   }}{}
+\end{supertabular}
+\end{center}
+\end{paracol}
+%\switchcolumn % Switch to the next paracol column
+#+END_EXPORT
