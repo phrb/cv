@@ -130,9 +130,9 @@
 % Command for entering a new work position
 \newcommand{\workposition}[5]{
     {\small\textsc{#1}} & \textbf{#2}\\ % Duration and Job Title
-    \expandafter\ifstrequal\expandafter{#3}{}{}{& \textit{#3}\\} % Institution / Lab
-    \expandafter\ifstrequal\expandafter{#4}{}{}{& \textit{#4}\\[4pt]} % University
-    \expandafter\ifstrequal\expandafter{#5}{}{}{& {\small#5}\\[6pt]} % Description
+    \expandafter\ifstrequal\expandafter{#3}{}{}{& {\small\textit{#3}}\\} % Institution / Lab
+    \expandafter\ifstrequal\expandafter{#4}{}{}{& {\small\textit{#4}}\\[4pt]} % University
+    \expandafter\ifstrequal\expandafter{#5}{}{}{& {\small#5}\\[4pt]} % Description
 }
 
 % Command for entering a separate qualification
@@ -152,7 +152,10 @@
     \textbf{#1} & \textbf{#2} & \textbf{#3}\expandafter\ifstrequal\expandafter{#4}{}{\\}{\\[6pt]} % First the heading, then content, then a conditional insertion of whitespace if the third parameter has any content in it
 }
 \newcommand{\tableentrythree}[4]{
-    #1 & #2 & #3\expandafter\ifstrequal\expandafter{#4}{}{\\}{\\[6pt]} % First the heading, then content, then a conditional insertion of whitespace if the third parameter has any content in it
+    \textsc{#1} & #2 & #3\expandafter\ifstrequal\expandafter{#4}{}{\\}{\\[6pt]} % First the heading, then content, then a conditional insertion of whitespace if the third parameter has any content in it
+}
+\newcommand{\tableentrythreeskills}[4]{
+    {\small#1} & {\small#2} & {\small#3}\expandafter\ifstrequal\expandafter{#4}{}{\\}{\\[6pt]} % First the heading, then content, then a conditional insertion of whitespace if the third parameter has any content in it
 }
 
 % Command for entering a long-form description where there is a title on one line and a paragraph description below it
@@ -163,7 +166,7 @@
 
 % Command for entering a publication in long-form format
 \newcommand{\longformpublication}[1]{
-    #1\medskip
+    {\small#1}\medskip
 }
 
 % Command for entering a publication as a short DOI (digital object identifier) string to the publication, a link is automatically created
@@ -172,3 +175,5 @@
     \href{http://dx.doi.org/#2}{\expandafter\ifstrequal\expandafter{#3}{firstauthor}{\textbf{doi:#2}}{doi:#2}}% DOI string and if "firstauthor" is entered for the 3rd argument, this makes the DOI string bold indicating a first author publication
     \expandafter\ifstrequal\expandafter{#4}{}{\\}{\\[3pt]} % Conditional insertion of whitespace if the 4th parameter has any content in it
 }
+
+%\usepackage{showframe}
