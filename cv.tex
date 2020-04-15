@@ -1,4 +1,4 @@
-% Created 2019-08-28 Wed 14:35
+% Created 2020-04-15 Wed 16:11
 % Intended LaTeX compiler: pdflatex
 \documentclass[a4paper,10pt]{article}
 
@@ -11,7 +11,7 @@
  pdftitle={},
  pdfkeywords={},
  pdfsubject={},
- pdfcreator={Emacs 26.2 (Org mode 9.2.5)},
+ pdfcreator={Emacs 26.3 (Org mode 9.2.5)},
  pdflang={English}}
 \begin{document}
 
@@ -19,7 +19,7 @@
     \vspace{-0.08\textheight} % Reduce whitespace above the parbox to separate it from the main content
     \centering % Centre text
     {\LARGE \textbf{Pedro Bruel | Researcher \& Software Engineer}}\\\medskip % Your name
-    {\Large Performance Tuning \& Modeling \textbullet{} Optimal Experimental Design}
+    {\Large Performance Modeling \& Optimization \textbullet{} Statistical Learning}
 }
 
 %----------------------------------------------------------------------------------------
@@ -32,7 +32,7 @@
     \colorbox{shade}{ % Create the coloured box
         \begin{supertabular}{p{0.75\linewidth}} % Start a table with two columns, the table will ensure everything is aligned
             \raisebox{-1pt}{\faHome} \hspace{0.15cm} 1171 Av. Prof. Luciano Gualberto, São Paulo, Brazil \hspace{0.2cm} \raisebox{-1pt}{\faPhone} \hspace{0.14cm} +55 11 9 5023 9033 \\ % Address
-            \raisebox{0pt}{\small\faEnvelope} \hspace{0.2cm} \href{mailto:pedro.bruel@gmail.com}{pedro.bruel@gmail.com} \hspace{0.2cm} \raisebox{0pt}{\small\faDesktop} \hspace{0.2cm} \href{https://www.ime.usp.br/~phrb}{ime.usp.br/\textasciitilde{}phrb} \hspace{0.31cm} \raisebox{-1pt}{\faLinkedin} \hspace{0.2cm} \href{https://www.linkedin.com/in/pedro-bruel}{pedro-bruel} \hspace{0.2cm} \raisebox{-1pt}{\faGithub} \hspace{0.2cm} \href{https://github.com/phrb}{phrb} \\
+            \raisebox{0pt}{\small\faEnvelope} \hspace{0.2cm} \href{mailto:pedro.bruel@gmail.com}{pedro.bruel@gmail.com} \hspace{0.2cm} \raisebox{0pt}{\small\faDesktop} \hspace{0.2cm} \href{https://phrb.github.io}{phrb.github.io} \hspace{0.31cm} \raisebox{-1pt}{\faLinkedin} \hspace{0.2cm} \href{https://www.linkedin.com/in/pedro-bruel}{pedro-bruel} \hspace{0.2cm} \raisebox{-1pt}{\faGithub} \hspace{0.2cm} \href{https://github.com/phrb}{phrb} \\
             % See fontawesome.pdf in the fonts folder for all icons you can use
         \end{supertabular}
     }
@@ -42,66 +42,62 @@
 \begin{paracol}{2} % Begin the multi-column environment
 
 \section{Experience}
-\label{sec:org0bf57b6}
+\label{sec:orge24877b}
 \newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
 \newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
 \newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
 
-\begin{supertabular}{R{0.315\linewidth}L{0.64\linewidth}}
+\begin{supertabular}{R{0.24\linewidth}L{0.74\linewidth}}
 
-\workposition{Sep 2019 -- Mar 2020}
-    {Researcher \& Software Engineer}
-    {Hewllett-Packard Enterprise}
+\workposition{Jan '20 - Dec '20}
+    {Research \& Project Management}
     {University of São Paulo, Brazil}
-    {Developing Design of Experiments software and refining autotuning
-    techniques for High-Performance Computing}
+    {with Hewllett Packard Enterprise}
+    {Developing  Statistical Learning  software in  Julia, helping  to manage  1
+      undergraduate and 4 masters students in applying modeling and optimization
+      methods to diverse High Performance Computing domains}
 
-\workposition{2017 -- May 2020}
-    {Researcher \& Software Engineer}
+\workposition{Nov '19 - Jan '20}
+    {Visiting Researcher}
+    {Hewllett Packard Enterprise, Palo Alto}
+    {}
+    {Developing  autotuners based on Statistical Learning for Neural Networks and
+     Deep Learning hardware accelerators}
+
+\workposition{\mbox{Nov '17 - Dec '20}}
+    {Research \& Software Engineering}
     {Grenoble Informatics Laboratory}
     {University of Grenoble Alpes, France}
     {Developing Design of Experiments Techniques for autotuning High-Performance
-    Computing kernels and compilers on CPUs, GPUs and FPGAs}
+      Computing kernels and compilers on CPUs, GPUs and FPGAs}
 
-\workposition{2015 -- May 2020}
-    {Researcher \& Software Engineer}
+\workposition{Jan '15 - Aug '20}
+    {Research \& Software Engineering}
     {Software Systems Laboratory}
     {University of São Paulo, Brazil}
-    {Developed autotuners for High-Level Synthesis compilers for FPGAs and for
+    {Developing autotuners for High-Level Synthesis compilers for FPGAs and for
     the CUDA Compiler using Search Heuristics}
 
-\workposition{2015 -- 2016}
-    {Researcher \& Software Engineer}
-    {Hewllett-Packard Enterprise}
+\workposition{Jan '15 - Jan '16}
+    {Research \& Software Engineering}
     {University of São Paulo, Brazil}
+    {with Hewllett Packard Enterprise}
     {Developed an autotuner for the LegUp High-Level Synthesis compiler for
-    Altera FPGAs}
+    Altera FPGAs using Search Heuristics}
 
-\workposition{2012 -- 2014}
-    {Researcher -- Intern}
+\workposition{Jan '12 - Jan '14}
+    {Research Internship}
     {Computer Music Research Group}
     {University of São Paulo, Brazil}
-    {Maintained and developed a multiagent system for music composition via
+    {Maintained and developed a Multiagent System for music composition via
     agent interaction}
 
 \end{supertabular}
 
-\smallskip % Standardise the whitespace after this section and before the next (the custom command adds too much otherwise)
-\section{Languages}
-\label{sec:org7843774}
-\begin{center}
-\begin{supertabular}{R{0.3\linewidth}C{0.17\linewidth}L{0.3\linewidth}}
-\tableentrythree{Portuguese}{\textit{CEFR C2}}{Native}{}
-\tableentrythree{English}{\textit{CEFR C2}}{Fluent}{}
-\tableentrythree{French}{\textit{CEFR C1}}{Proficient}{}
-\tableentrythree{Spanish}{\textit{CEFR A2}}{Basic}{}
-\end{supertabular}
-\end{center}
-%\end{paracol}
 \switchcolumn % Switch to the next paracol column
-\smallskip
+\smallskip % Standardise the whitespace after this section and before the next (the custom command adds too much otherwise)
 \section{Select Publications}
-\label{sec:org9f48926}
+\label{sec:org09f2ad0}
 \longformpublication{\textbf{Bruel, P.}, Quinito Masnada, S., Videau, B., Legrand, A., Vincent, J. M., and Goldman, A., \textbf{2019}. \textit{Autotuning Under Tight Budget Constraints: A Transparent Design of Experiments Approach}. 19th IEEE/ACM International Symposium on Cluster, Cloud and Grid Computing (CCGRID).}
 
 \longformpublication{\textbf{Bruel, P.}, Goldman, A., Chalamalasetti, S.R. and Milojicic, D., \textbf{2017}. \textit{Autotuning high-level synthesis for FPGAs using OpenTuner and LegUp}. ReConFigurable Computing and FPGAs (ReConFig), International Conference.}
@@ -110,14 +106,14 @@
 
 \longformpublication{\textbf{Bruel, P.}, Amarís, M. and Goldman, A., \textbf{2017}. \textit{Autotuning CUDA compiler parameters for heterogeneous applications using the OpenTuner framework}. Concurrency and Computation: Practice and Experience.}
 
-\longformpublication{Gonçalves, R., Amaris, M., Okada, T., \textbf{Bruel, P.} and Goldman, A., \textbf{2016}. \textit{Openmp is not as Easy as it Appears}. System Sciences (HICSS), 49th Hawaii International Conference.}
+% \longformpublication{Gonçalves, R., Amaris, M., Okada, T., \textbf{Bruel, P.} and Goldman, A., \textbf{2016}. \textit{Openmp is not as Easy as it Appears}. System Sciences (HICSS), 49th Hawaii International Conference.}
 
 %\longformpublication{\textbf{Bruel, P.} and Queiroz, M., \textbf{2014}. \textit{A Protocol for creating Multiagent Systems in Ensemble with Pure Data}. International Computer Music Conference (ICMC).}
 \smallskip % Extra whitespace before the next section
 
 %\end{paracol}
 \section{Education}
-\label{sec:org539e8d5}
+\label{sec:org7adace8}
 \begin{supertabular}{R{0.24\linewidth}L{0.7\linewidth}}
     \workposition{2015 -- 2020}
     {PhD in Computer Science}
@@ -134,10 +130,23 @@
 
 \end{supertabular}
 
+%\end{paracol}
+%\switchcolumn % Switch to the next paracol column
+\section{Languages}
+\label{sec:org733e4aa}
+\begin{center}
+\begin{supertabular}{R{0.3\linewidth}C{0.17\linewidth}L{0.3\linewidth}}
+\tableentrythree{Portuguese}{\textit{CEFR C2}}{Native}{}
+\tableentrythree{English}{\textit{CEFR C2}}{Fluent}{}
+\tableentrythree{French}{\textit{CEFR C1}}{Proficient}{}
+\tableentrythree{Spanish}{\textit{CEFR A2}}{Basic}{}
+\end{supertabular}
+\end{center}
 \end{paracol}
 %\switchcolumn % Switch to the next paracol column
+\smallskip
 \section{Skills}
-\label{sec:org467d697}
+\label{sec:orga1b8bb6}
 \begin{paracol}{1}
 \newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
 \newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
@@ -145,33 +154,38 @@
 
 \begin{center}
 \begin{supertabular}{C{0.3\linewidth}C{0.25\linewidth}C{0.3\linewidth}}
-\tableheaderthree{Performance Tuning}{Software Engineering}{Tools and Infrastructure}{b}
+\tableheaderthree{Modeling \& Optimization}{Software Engineering}{Tools and Infrastructure}{b}
 \shrinkheight{3pt}
 \tableentrythreeskills{{\small\Ovalbox{Search Heuristics}
-                  \Ovalbox{Design of Experiments}
                   \Ovalbox{Optimal Design}
-                  \Ovalbox{Statistical Analysis}
-                  \Ovalbox{Performance Modeling}
+                  \Ovalbox{Statistical Learning}
+                  \Ovalbox{Gaussian Process Regression}
+                  \Ovalbox{Sensitivity Analysis}
+                  \Ovalbox{ANOVA}
                   }}
                  {{\small\Ovalbox{Python}
                    \Ovalbox{Julia}
                    \Ovalbox{R}
                    \Ovalbox{Bash}
+                   \Ovalbox{Pytorch}
                    \Ovalbox{C/C++}
                    \Ovalbox{OpenMP}
+                   \Ovalbox{pthreads}
                    \Ovalbox{MPI}
                    \Ovalbox{CUDA C}
                    \Ovalbox{Java}
+                   \Ovalbox{Automated Testing}
+                   \Ovalbox{Continuous Integration}
                    }}
                  {{\small\Ovalbox{GNU/Linux}
                    \Ovalbox{Git}
                    \Ovalbox{Grid5000}
                    \Ovalbox{GCE/AWS}
-                   \Ovalbox{Automated Testing}
-                   \Ovalbox{Continuous Integration}
                    \Ovalbox{\LaTeX}
                    \Ovalbox{Emacs}
                    \Ovalbox{Vim}
+                   \Ovalbox{tidyverse}
+                   \Ovalbox{Jupyter}
                    }}{}
 \end{supertabular}
 \end{center}
