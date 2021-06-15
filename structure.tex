@@ -19,9 +19,15 @@
 %    PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
 %----------------------------------------------------------------------------------------
 
+\usepackage[english]{babel}
+\usepackage{hyphenat}
+
+\hyphenpenalty=10000
+
 \usepackage{array}
 \usepackage{etoolbox} % Required for conditional statements
 \usepackage{amssymb}
+\usepackage{ragged2e}
 
 \setlength\parindent{0pt} % Stop paragraph indentation
 
@@ -34,11 +40,14 @@
 \usepackage{geometry} % Required for adjusting page dimensions and margins
 
 \geometry{
-    hmargin=1.46cm, % Horizontal margin
-    vmargin=1.7cm, % Vertical margin
+    hmargin=1.33cm, % Horizontal margin
+    vmargin=1.1cm, % Vertical margin
     a4paper, % Paper size, change to letterpaper for US letter size
     %showframe, % Uncomment to show how the type block is set on the page -- typically for debugging
 }
+
+\usepackage{enumitem}
+\setlist[itemize]{leftmargin=*}
 
 %----------------------------------------------------------------------------------------
 %    COLUMN LAYOUT
@@ -46,9 +55,9 @@
 
 \usepackage{paracol} % Required for creating multi-column layouts that can span pages automatically
 
-\columnratio{0.55,0.4} % The relative ratios of the two columns in the CV
+\columnratio{0.5,0.5} % The relative ratios of the two columns in the CV
 
-\setlength\columnsep{0.04\textwidth} % Specify the amount of space between the columns
+\setlength\columnsep{0.06\textwidth} % Specify the amount of space between the columns
 
 %----------------------------------------------------------------------------------------
 %    FONTS
@@ -66,6 +75,9 @@
 %% ]
 
 \setmainfont{Noto Sans}
+% \usepackage{newpxtext}
+% \usepackage{newpxmath}
+% \renewcommand{\familydefault}{\sfdefault}
 
 %\newfontfamily{\FA}{Font Awesome 5 Brands} % Create a new font family for FontAwesome icons, provided with the template in the fonts folder
 %\input{fonts/fontawesomesymbols-xeluatex.tex} % Load a file to create shortcuts to the icons, see icon examples and their shortcuts in fontawesome.pdf in the fonts folder
@@ -89,7 +101,7 @@
 
 \color{text} % Set the default text colour for the whole document to the colour defined as 'text' above
 
-\usepackage{unicode-math}
+%\usepackage{unicode-math}
 \usepackage{fancybox}
 
 %------------------------------------------------
@@ -151,11 +163,17 @@
 \newcommand{\tableheaderthree}[4]{
     \textbf{#1} & \textbf{#2} & \textbf{#3}\expandafter\ifstrequal\expandafter{#4}{}{\\}{\\[6pt]} % First the heading, then content, then a conditional insertion of whitespace if the third parameter has any content in it
 }
+\newcommand{\tableheadertwo}[3]{
+    \textbf{#1} & \textbf{#2}\expandafter\ifstrequal\expandafter{#3}{}{\\}{\\[6pt]} % First the heading, then content, then a conditional insertion of whitespace if the third parameter has any content in it
+}
 \newcommand{\tableentrythree}[4]{
     \textsc{#1} & #2 & #3\expandafter\ifstrequal\expandafter{#4}{}{\\}{\\[6pt]} % First the heading, then content, then a conditional insertion of whitespace if the third parameter has any content in it
 }
 \newcommand{\tableentrythreeskills}[4]{
     {\small#1} & {\small#2} & {\small#3}\expandafter\ifstrequal\expandafter{#4}{}{\\}{\\[6pt]} % First the heading, then content, then a conditional insertion of whitespace if the third parameter has any content in it
+}
+\newcommand{\tableentrytwoskills}[3]{
+    #1 & #2\expandafter\ifstrequal\expandafter{#3}{}{\\[6pt]}{\\[6pt]} % First the heading, then content, then a conditional insertion of whitespace if the third parameter has any content in it
 }
 
 % Command for entering a long-form description where there is a title on one line and a paragraph description below it
@@ -166,7 +184,7 @@
 
 % Command for entering a publication in long-form format
 \newcommand{\longformpublication}[1]{
-    {\small#1}\medskip
+    {\small#1}\smallskip
 }
 
 % Command for entering a publication as a short DOI (digital object identifier) string to the publication, a link is automatically created

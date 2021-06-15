@@ -5,10 +5,7 @@
 #+TITLE:
 #+AUTHOR:
 #+LANGUAGE:    en
-#+TAGS: noexport(n) Stats(S)
-#+TAGS: Teaching(T) R(R) OrgMode(O) Python(P)
-#+TAGS: Book(b) DOE(D) Code(C) NODAL(N) FPGA(F) Autotuning(A) Arnaud(r)
-#+TAGS: DataVis(v) PaperReview(W)
+#+TAGS: noexport(n) ignore(i)
 #+OPTIONS:   H:3 num:t toc:nil \n:nil @:t ::t |:t ^:t -:t f:t *:t <:t
 #+OPTIONS:   TeX:t LaTeX:nil skip:nil d:nil todo:t pri:nil tags:not-in-toc
 #+EXPORT_SELECT_TAGS: export
@@ -17,14 +14,14 @@
 #+LATEX_CLASS: article
 #+LATEX_CLASS_OPTIONS: [a4paper,10pt]
 #+LATEX_HEADER: \input{structure.tex}
-# #+LATEX_HEADER: \rfoot{\color{headings}{\sffamily Last update: \today. Typeset with Xe\LaTeX}}
 
+* Header and Contact                                                 :ignore:
 #+BEGIN_EXPORT latex
 \parbox[top][0.12\textheight][c]{\linewidth}{ % Parbox to hold the author name and CV text; fixed height to match the coloured box to the right, centred vertically and full line width
-    \vspace{-0.08\textheight} % Reduce whitespace above the parbox to separate it from the main content
+    \vspace{-0.04\textheight} % Reduce whitespace above the parbox to separate it from the main content
     \centering % Centre text
-    {\LARGE \textbf{Pedro Bruel | Researcher \& Software Engineer}}\\\medskip % Your name
-    {\Large Performance Modeling \& Optimization \textbullet{} Statistical Learning}
+    {\LARGE \textbf{Pedro Bruel | Researcher and Software Engineer}}\\\medskip % Your name
+    {\Large Performance Evaluation, Modeling, and Optimization}
 }
 
 %----------------------------------------------------------------------------------------
@@ -32,7 +29,7 @@
 %----------------------------------------------------------------------------------------
 
 \parbox[top][0.12\textheight][c]{\linewidth}{ % Parbox to hold the colour box; fixed height to match the name/CV text to the left, centred vertically and full line width
-    \vspace{-0.19\textheight} % Reduce whitespace above the parbox to separate it from the main content
+    \vspace{-0.17\textheight} % Reduce whitespace above the parbox to separate it from the main content
     \centering
     \colorbox{shade}{ % Create the coloured box
         \begin{supertabular}{p{0.75\linewidth}} % Start a table with two columns, the table will ensure everything is aligned
@@ -43,127 +40,142 @@
     }
 }
 
-\vspace{-0.11\textheight} % Reduce whitespace above the parbox to separate it from the main content
+\vspace{-0.1\textheight} % Reduce whitespace above the parbox to separate it from the main content
 \begin{paracol}{2} % Begin the multi-column environment
 #+END_EXPORT
 
-* Setup                                                            :noexport:
-:PROPERTIES:
-:BEAMER_env: ignoreheading
-:END:
-#+HEADER: :results output :exports none :eval no-export
-#+BEGIN_SRC emacs-lisp
-(setq-local org-latex-pdf-process (list "latexmk -xelatex %f"))
-#+END_SRC
-
-#+RESULTS:
-* Experience
+* Research Experience
 #+BEGIN_EXPORT latex
 \newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
 \newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
 \newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
 
-\begin{supertabular}{R{0.24\linewidth}L{0.74\linewidth}}
+\begin{tabular}{R{0.26\linewidth}p{0.73\linewidth}}
 
-\workposition{Jan '20 - Dec '20}
-    {Research \& Project Management}
+\workposition{Jan '20 - Jan '21}
+    {Researcher, Project Manager, and Co-Advisor}
     {University of São Paulo, Brazil}
     {with Hewllett Packard Enterprise}
-    {Developing  Statistical Learning  software in  Julia, helping  to manage  1
-      undergraduate and 4 masters students in applying modeling and optimization
-      methods to diverse High Performance Computing domains}
+    {Developed  statistical   software  in  Julia,  managed   and  co-advised  1
+      undergraduate and  7 masters  students in  the application  of performance
+      evaluation, modeling, and optimization methods to different domains}
 
-\workposition{Nov '19 - Jan '20}
+\workposition{\mbox{Nov '19 - Jan '20}}
     {Visiting Researcher}
-    {Hewllett Packard Enterprise, Palo Alto}
     {}
-    {Developing  autotuners based on Statistical Learning for Neural Networks and
-     Deep Learning hardware accelerators}
+    {Hewllett Packard Enterprise, Palo Alto}
+    {Conducted performance measurement and optimization, using Gaussian Process
+      Regression, for Neural Networks and Deep Learning hardware accelerators}
 
-\workposition{\mbox{Nov '17 - Dec '20}}
-    {Research \& Software Engineering}
+\workposition{\mbox{Nov '17 - Jul '21}}
+    {Researcher}
     {Grenoble Informatics Laboratory}
     {University of Grenoble Alpes, France}
-    {Developing Design of Experiments Techniques for autotuning High-Performance
-      Computing kernels and compilers on CPUs, GPUs and FPGAs}
+    {Developed and applied Design of Experiments and Gaussian Process Regression
+      methods for optimizing High Performance Computing kernels and compilers on
+      CPUs, GPUs and FPGAs, and Neural Networks}
 
-\workposition{Jan '15 - Aug '20}
-    {Research \& Software Engineering}
+\workposition{Jan '15 - Jul '21}
+    {Researcher}
     {Software Systems Laboratory}
     {University of São Paulo, Brazil}
-    {Developing autotuners for High-Level Synthesis compilers for FPGAs and for
-    the CUDA Compiler using Search Heuristics}
+    {Developed and  applied Search  Heuristics and  Online Learning  methods for
+      optimizing  High-Level Synthesis  compilers  for FPGAs  and  for the  CUDA
+      Compiler}
 
 \workposition{Jan '15 - Jan '16}
-    {Research \& Software Engineering}
+    {Researcher}
     {University of São Paulo, Brazil}
     {with Hewllett Packard Enterprise}
-    {Developed an autotuner for the LegUp High-Level Synthesis compiler for
-    Altera FPGAs using Search Heuristics}
+    {Developed and  applied Search Heuristics  and Online Learning  an autotuner
+      for the LegUp High-Level Synthesis compiler for Altera FPGAs}
 
-\workposition{Jan '12 - Jan '14}
-    {Research Internship}
+\workposition{Jan '12 - Jan '15}
+    {Research Intern}
     {Computer Music Research Group}
     {University of São Paulo, Brazil}
-    {Maintained and developed a Multiagent System for music composition via
-    agent interaction}
+    {Developed  a  Multiagent  System  in  Java, Pure  Data,  and  C  for  music
+      composition via agent interaction}
 
-\end{supertabular}
+\end{tabular}
 
 \switchcolumn % Switch to the next paracol column
 \smallskip % Standardise the whitespace after this section and before the next (the custom command adds too much otherwise)
 #+END_EXPORT
+* Teaching Experience
+#+BEGIN_EXPORT latex
+\begin{tabular}{R{0.24\linewidth}p{0.7\linewidth}}
+
+\workposition{\mbox{Jan '15 - July '21}}
+    {Teaching Assistant}
+    {}
+    {University of São Paulo, Brazil}
+    {Recurring  TA for  the  \textit{Parallel and  Distributed Programming}  and
+      \textit{Introduction to Programming} courses, preparing teaching material,
+      giving lectures, and preparing and grading assignments and projects}
+
+\end{tabular}
+
+%\switchcolumn % Switch to the next paracol column
+\smallskip % Standardise the whitespace after this section and before the next (the custom command adds too much otherwise)
+#+END_EXPORT
+* Education
+#+BEGIN_EXPORT latex
+\begin{tabular}{R{0.24\linewidth}p{0.7\linewidth}}
+    \workposition{2015 -- 2020}
+    {PhD in Computer Science}
+    {University of Grenoble Alpes, France}
+    {University of São Paulo, Brazil}
+    {\textbf{Title}:  \textit{Toward Transparent  and  Parsimonious Methods  for
+        Automatic Performance Tuning}}
+
+    \workposition{2010 -- 2014} % Duration
+    {BsC in Molecular Sciences}
+    {}
+    {University of São Paulo, Brazil}
+    {\textbf{Title}:  \textit{A  Protocol  for creating  Multiagent  Systems  in
+        Ensemble with Pure Data}}
+
+\end{tabular}
+
+\smallskip
+%\end{paracol}
+%\switchcolumn % Switch to the next paracol column
+#+END_EXPORT
 * Select Publications
 #+BEGIN_EXPORT latex
-\longformpublication{\textbf{Bruel, P.}, Quinito Masnada, S., Videau, B., Legrand, A., Vincent, J. M., and Goldman, A., \textbf{2019}. \textit{Autotuning Under Tight Budget Constraints: A Transparent Design of Experiments Approach}. 19th IEEE/ACM International Symposium on Cluster, Cloud and Grid Computing (CCGRID).}
-
-\longformpublication{\textbf{Bruel, P.}, Goldman, A., Chalamalasetti, S.R. and Milojicic, D., \textbf{2017}. \textit{Autotuning high-level synthesis for FPGAs using OpenTuner and LegUp}. ReConFigurable Computing and FPGAs (ReConFig), International Conference.}
-
-\longformpublication{\textbf{Bruel, P.}, Chalamalasetti, S.R., Dalton, C., El Hajj, I., Goldman, A., Graves, C., Hwu, W.M., Laplante, P., Milojicic, D., Ndu, G. and Strachan, J.P., \textbf{2017}. \textit{Generalize or Die: Operating Systems Support for Memristor-based Accelerators}. IEEE International Conference on Rebooting Computing (ICRC).}
-
-\longformpublication{\textbf{Bruel, P.}, Amarís, M. and Goldman, A., \textbf{2017}. \textit{Autotuning CUDA compiler parameters for heterogeneous applications using the OpenTuner framework}. Concurrency and Computation: Practice and Experience.}
+\begin{tabular}{p{\linewidth}}
+\longformpublication{Huang,   S.,  Ankit,   A.,  Silveira,   P.,  Antunes,   R.,
+  Chalamalasetti, S.R., El Hajj, I.,  Kim, D.E., Aguiar, G., \textbf{Bruel, P.},
+  Serebryakov, S.  and  Xu, C., \textbf{2021}. Mixed  precision quantization for
+  ReRAM-based  DNN inference  accelerators.  26th  IEEE Asia  and South  Pacific
+  Design Automation Conference (ASP-DAC).} \\
+\longformpublication{\textbf{Bruel,  P.},  Quinito   Masnada,  S.,  Videau,  B.,
+  Legrand,   A.,   Vincent,   J.     M.,   and   Goldman,   A.,   \textbf{2019}.
+  \textit{Autotuning  Under Tight  Budget Constraints:  A Transparent  Design of
+    Experiments Approach}.   19th IEEE/ACM  International Symposium  on Cluster,
+  Cloud and Grid Computing (CCGRID).} \\
+\longformpublication{\textbf{Bruel, P.},  Goldman, A., Chalamalasetti,  S.R. and
+  Milojicic,  D., \textbf{2017}.   \textit{Autotuning  high-level synthesis  for
+    FPGAs  using  OpenTuner  and  LegUp}.  ReConFigurable  Computing  and  FPGAs
+  (ReConFig), International Conference.} \\
+\longformpublication{\textbf{Bruel,  P.}, Chalamalasetti,  S.R., Dalton,  C., El
+  Hajj, I.,  Goldman, A., Graves,  C., Hwu,  W.M., Laplante, P.,  Milojicic, D.,
+  Ndu,  G.   and  Strachan,  J.P., \textbf{2017}.   \textit{Generalize  or  Die:
+    Operating   Systems  Support   for   Memristor-based  Accelerators}.    IEEE
+  Intl. Conference on Rebooting Computing (ICRC).} \\
+\longformpublication{\textbf{Bruel,   P.},   Amarís,   M.   and   Goldman,   A.,
+  \textbf{2017}. \textit{Autotuning  CUDA compiler parameters  for heterogeneous
+    applications using  the OpenTuner  framework}. Concurrency  and Computation:
+  Practice and Experience.} \\
+\end{tabular}
 
 % \longformpublication{Gonçalves, R., Amaris, M., Okada, T., \textbf{Bruel, P.} and Goldman, A., \textbf{2016}. \textit{Openmp is not as Easy as it Appears}. System Sciences (HICSS), 49th Hawaii International Conference.}
 
 %\longformpublication{\textbf{Bruel, P.} and Queiroz, M., \textbf{2014}. \textit{A Protocol for creating Multiagent Systems in Ensemble with Pure Data}. International Computer Music Conference (ICMC).}
 \smallskip % Extra whitespace before the next section
 
-%\end{paracol}
-#+END_EXPORT
-* Education
-#+BEGIN_EXPORT latex
-\begin{supertabular}{R{0.24\linewidth}L{0.7\linewidth}}
-    \workposition{2015 -- 2020}
-    {PhD in Computer Science}
-    {University of Grenoble Alpes, France}
-    {University of São Paulo, Brazil}
-    {High-Performance Computing, Autotuning, Design of Experiments, Search
-    Heuristics, Statistical Learning}
-
-    \workposition{2010 -- 2014} % Duration
-    {BsC in Molecular Sciences}
-    {}
-    {University of São Paulo, Brazil}
-    {Multiagent Systems, Digital Signal Processing}
-
-\end{supertabular}
-
-%\end{paracol}
-%\switchcolumn % Switch to the next paracol column
-#+END_EXPORT
-* Languages
-#+BEGIN_EXPORT latex
-\begin{center}
-\begin{supertabular}{R{0.3\linewidth}C{0.17\linewidth}L{0.3\linewidth}}
-\tableentrythree{Portuguese}{\textit{CEFR C2}}{Native}{}
-\tableentrythree{English}{\textit{CEFR C2}}{Fluent}{}
-\tableentrythree{French}{\textit{CEFR C1}}{Proficient}{}
-\tableentrythree{Spanish}{\textit{CEFR A2}}{Basic}{}
-\end{supertabular}
-\end{center}
 \end{paracol}
-%\switchcolumn % Switch to the next paracol column
-\smallskip
 #+END_EXPORT
 * Skills
 #+BEGIN_EXPORT latex
@@ -173,42 +185,226 @@
 \newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
 
 \begin{center}
-\begin{supertabular}{C{0.3\linewidth}C{0.25\linewidth}C{0.3\linewidth}}
-\tableheaderthree{Modeling \& Optimization}{Software Engineering}{Tools and Infrastructure}{b}
+\begin{tabular}{L{0.48\linewidth}L{0.48\linewidth}}
+\tableheadertwo{Statistics and Learning}{Software Engineering}{}
 \shrinkheight{3pt}
-\tableentrythreeskills{{\small\Ovalbox{Search Heuristics}
-                  \Ovalbox{Optimal Design}
-                  \Ovalbox{Statistical Learning}
-                  \Ovalbox{Gaussian Process Regression}
-                  \Ovalbox{Sensitivity Analysis}
-                  \Ovalbox{ANOVA}
-                  }}
-                 {{\small\Ovalbox{Python}
-                   \Ovalbox{Julia}
-                   \Ovalbox{R}
-                   \Ovalbox{Pytorch}
-                   \Ovalbox{C/C++}
-                   \Ovalbox{OpenMP}
-                   \Ovalbox{pthreads}
-                   \Ovalbox{MPI}
-                   \Ovalbox{CUDA C}
-                   \Ovalbox{Java}
-                   \Ovalbox{Automated Testing}
-                   \Ovalbox{Continuous Integration}
-                   }}
-                 {{\small\Ovalbox{GNU/Linux}
-                   \Ovalbox{Git}
-                   \Ovalbox{Grid5000}
-                   \Ovalbox{GCE/AWS}
-                   \Ovalbox{Bash}
-                   \Ovalbox{\LaTeX}
-                   \Ovalbox{Emacs}
-                   \Ovalbox{Vim}
-                   \Ovalbox{tidyverse}
-                   \Ovalbox{Jupyter}
-                   }}{}
+\tableentrytwoskills{{
+\normalsize
+#+end_export
+
+- Using Design of Experiments to reduce the cost to explore and construct models
+  in high-dimensional search spaces
+- Building and improving surrogate models,  such as neural networks and decision
+  trees
+- Determining parameter significance and running sensitivity analysis
+
+#+begin_export latex
+\begin{center}
+\vspace{1em}
+{\small\ovalbox{Reproducible Research}
+\ovalbox{Optimal Design}
+\ovalbox{Linear Models}
+\ovalbox{Search Heuristics}
+\ovalbox{Clustering}
+\ovalbox{Bayesian Modeling}
+\ovalbox{Gaussian Process Regression}
+\ovalbox{Sensitivity Analysis}
+\ovalbox{Convolutional Neural Networks}
+\ovalbox{ANOVA}}
+\vspace{1em}
+\end{center}
+}} {{
+\normalsize
+#+end_export
+
+- Developing  and   maintaining  free  software  libraries   and  projects,  and
+  contributing to projects such as GNU Emacs
+- Practicing and enforcing software engineering best practices and agile methods
+- Developing  and optimizing  applications for  neural networks  and parallel  &
+  distributed programming
+
+#+begin_export latex
+\begin{center}
+\vspace{1em}
+{\small\ovalbox{C}
+\ovalbox{Lisp}
+\ovalbox{C++}
+\ovalbox{OpenMP}
+\ovalbox{pthreads}
+\ovalbox{Pytorch}
+\ovalbox{MPI}
+\ovalbox{CUDA C}
+\ovalbox{R}
+\ovalbox{Julia}
+\ovalbox{Python}
+\ovalbox{Java}
+\ovalbox{Agile Methods}
+\ovalbox{Test Driven Development}
+\ovalbox{Automated Testing}
+\ovalbox{Continuous Integration}}
+\vspace{1em}
+\end{center}
+}}{}
+\tableheadertwo{Tools and Infrastructure}{Communication and Management}{}
+\shrinkheight{3pt}
+\tableentrytwoskills{{
+\normalsize
+#+end_export
+
+- Developing  and  maintaining  reproducible workflows,  software  environments,
+  experiments, and results using  version control, virtualization, computational
+  documents, and archival systems
+- Maintaining,  configuring,  and  updating  GNU/Linux  systems,  managing  users,
+  providing IT support
+- Developing and deploying applications for clouds and remote computer systems
+- Automating  data  wrangling,  formatting, analysis,  and  plotting,  producing
+  high-quality print-ready documents
+
+#+begin_export latex
+\begin{center}
+\vspace{1em}
+{\small\ovalbox{GNU/Linux}
+\ovalbox{git}
+\ovalbox{Zenodo}
+\ovalbox{docker}
+\ovalbox{singularity}
+\ovalbox{bash}
+\ovalbox{\LaTeX}
+\ovalbox{Emacs}
+\ovalbox{org-mode}
+\ovalbox{vim}
+\ovalbox{tidyverse}
+\ovalbox{Jupyter}
+\ovalbox{Grid5000}
+\ovalbox{GCE}
+\ovalbox{AWS}}
+\vspace{1em}
+\end{center}
+}} {{
+\normalsize
+\vspace{-6em}
+#+end_export
+
+- Writing research projects and funding proposals for teams with multiple members
+- Coordinating and advising research and software engineering teams
+- Assessing team resources and throughput to plan achievable milestones
+- Conflict resolution and mediation, interpersonal communication
+- Preparing and coordinating project presentations, reports, and deliverables
+
+#+begin_export latex
+}}{}
+\tableheadertwo{Languages}{Teaching}{}
+\shrinkheight{3pt}
+\tableentrytwoskills{{
+\begin{center}
+{\small
+\ovalbox{Portuguese: \textbf{CEFR C2} (Native)}
+
+\ovalbox{English: \textbf{CEFR C2} (Fluent)}
+
+\ovalbox{French: \textbf{CEFR C2} (Fluent)}
+
+\ovalbox{Spanish: \textbf{CEFR B1} (Intermediate)}}
+\vspace{1em}
+\end{center}
+}}{{
+\normalsize
+#+end_export
+
+- Preparing  and giving  lectures  on various  Computer  Science and  Statistics
+  subjects,   such   as   parallel  computing   concepts,   architectures,   and
+  industry-standard tools, and Design of Experiments
+- Preparing  and  grading  tests  and group  programming  projects  to  exercise
+  concepts and achieve learning objectives
+- Promoting a student-centered course, fostering online and in-class discussions
+  among students and teachers
+
+#+begin_export latex
+}}{}
+\end{tabular}
+\end{center}
+\end{paracol}
+%\switchcolumn % Switch to the next paracol column
+#+END_EXPORT
+
+* Skills (Old)                                                     :noexport:
+#+BEGIN_EXPORT latex
+\begin{paracol}{1}
+\newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+
+\begin{center}
+\begin{supertabular}{C{0.3\linewidth}C{0.25\linewidth}C{0.3\linewidth}}
+\tableheaderthree{Modeling, Evaluation, and Optimization}{Software Engineering}{Tools and Infrastructure}{b}
+\shrinkheight{3pt}
+\tableentrythreeskills{{
+    \small\Ovalbox{Search Heuristics}
+    \Ovalbox{Optimal Design}
+    \Ovalbox{Statistical Learning}
+    \Ovalbox{Gaussian Process Regression}
+    \Ovalbox{Sensitivity Analysis}
+    \Ovalbox{ANOVA}}}
+                      {{
+                          \small\Ovalbox{Python}
+                          \Ovalbox{Julia}
+                          \Ovalbox{R}
+                          \Ovalbox{Pytorch}
+                          \Ovalbox{C/C++}
+                          \Ovalbox{OpenMP}
+                          \Ovalbox{pthreads}
+                          \Ovalbox{MPI}
+                          \Ovalbox{CUDA C}
+                          \Ovalbox{Java}
+                          \Ovalbox{Automated Testing}
+                          \Ovalbox{Continuous Integration}}}
+                      {{
+                          \small\Ovalbox{GNU/Linux}
+                          \Ovalbox{Git}
+                          \Ovalbox{Grid5000}
+                          \Ovalbox{GCE/AWS}
+                          \Ovalbox{Bash}
+                          \Ovalbox{\LaTeX}
+                          \Ovalbox{Emacs}
+                          \Ovalbox{Vim}
+                          \Ovalbox{tidyverse}
+                          \Ovalbox{Jupyter}
+                      }}{}
 \end{supertabular}
 \end{center}
 \end{paracol}
 %\switchcolumn % Switch to the next paracol column
 #+END_EXPORT
+
+* Languages                                                        :noexport:
+#+BEGIN_EXPORT latex
+\begin{paracol}{1}
+\newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\begin{center}
+\begin{supertabular}{R{0.3\linewidth}C{0.17\linewidth}L{0.3\linewidth}}
+\tableentrythree{Portuguese}{\textit{CEFR C2}}{Native}{}
+\tableentrythree{English}{\textit{CEFR C2}}{Fluent}{}
+\tableentrythree{French}{\textit{CEFR C2}}{Fluent}{}
+\tableentrythree{Spanish}{\textit{CEFR A2}}{Basic}{}
+\end{supertabular}
+\end{center}
+\end{paracol}
+%\switchcolumn % Switch to the next paracol column
+%\smallskip
+#+END_EXPORT
+* Emacs Setup                                                      :noexport:
+:PROPERTIES:
+:BEAMER_env: ignoreheading
+:END:
+See [[LaTeX Setup]] above for the beamer configuration
+
+** Use XeLaTeX
+If you  accept this definition  when loading the  buffer, this variable  will be
+modified  locally to  the buffer.  This allows  using XeLaTeX  for exporting  to
+beamer pdf.
+
+# Local Variables:
+# eval: (setq-local org-latex-pdf-process (list "latexmk -xelatex %f"))
+# End:
